@@ -2,10 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <!-- 반응형 웹사이트를 위한 뷰포트 설정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Robotics 동아리</title>
-    <!-- Tailwind CSS CDN 로드 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Inter 폰트 적용 (Tailwind의 기본 sans 폰트 계열) */
@@ -33,14 +31,11 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- 헤더 및 네비게이션 바 -->
     <header class="bg-gray-900 text-white shadow-lg sticky top-0 z-50">
         <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- 동아리 로고/이름 -->
             <div class="text-2xl font-bold tracking-wider">
                 Mobile Robotics
             </div>
-            <!-- 네비게이션 링크 -->
             <ul class="flex space-x-6">
                 <li>
                     <a id="nav-home" href="#" onclick="showSection('home', event)" class="nav-link text-blue-400 font-semibold border-b-2 border-blue-400 pb-1">동아리 소개</a>
@@ -52,13 +47,10 @@
         </nav>
     </header>
 
-    <!-- 메인 콘텐츠 영역 -->
     <main class="max-w-6xl mx-auto p-6 md:p-12">
 
-        <!-- === 동아리 소개 섹션 === -->
         <section id="home-section" class="page-section">
             
-            <!-- 1. 히어로 섹션 -->
             <div class="bg-white rounded-xl shadow-2xl p-10 md:p-16 text-center mb-16 overflow-hidden">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                     Mobile Robotics에 오신 것을 환영합니다
@@ -72,12 +64,10 @@
                 </button>
             </div>
 
-            <!-- 2. 우리 동아리는? (특징 그리드) -->
             <div class="mb-16">
                 <h2 class="text-3xl font-bold text-center mb-10">우리는 무엇을 하나요?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     
-                    <!-- 카드 1: 학습 -->
                     <div class="bg-white rounded-xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-xl">
                         <img src="https://placehold.co/600x400/EBF8FF/3182CE?text=Learn" alt="학습" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-bold mb-3 text-blue-700">체계적인 학습</h3>
@@ -87,7 +77,6 @@
                         </p>
                     </div>
 
-                    <!-- 카드 2: 제작 -->
                     <div class="bg-white rounded-xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-xl">
                         <img src="https://placehold.co/600x400/E6FFFA/38B2AC?text=Build" alt="제작" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-bold mb-3 text-teal-700">프로젝트 제작</h3>
@@ -97,7 +86,6 @@
                         </p>
                     </div>
 
-                    <!-- 카드 3: 경험 -->
                     <div class="bg-white rounded-xl shadow-lg p-8 transform transition duration-500 hover:scale-105 hover:shadow-xl">
                         <img src="https://placehold.co/600x400/FFF5EB/ED8936?text=Compete" alt="경험" class="rounded-lg mb-6 w-full h-48 object-cover">
                         <h3 class="text-2xl font-bold mb-3 text-orange-700">대회 및 전시</h3>
@@ -110,13 +98,28 @@
                 </div>
             </div>
 
-        </section> <!-- /#home-section -->
-
-
-        <!-- === Google Form 지원하기 섹션 === -->
-        <section id="form-section" class="page-section">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold text-center mb-10">동아리 활동 영상</h2>
+                <div class="bg-white rounded-xl shadow-2xl p-4 md:p-8 overflow-hidden">
+                    
+                    <div class="aspect-video">
+                        <iframe 
+                            class="w-full h-full rounded-lg"
+                            src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-center text-gray-600 mt-6">
+                        [영상 설명] 저희 Mobile Robotics 동아리의 실제 로봇 작동 영상입니다.
+                    </p>
+                </div>
+            </div>
+            </section> <section id="form-section" class="page-section">
             
-            <!-- 지원 안내 카드 -->
             <div class="flex justify-center items-center min-h-[60vh]">
                 <div class="bg-white rounded-xl shadow-2xl p-10 md:p-16 text-center max-w-3xl w-full">
                     <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6">
@@ -128,10 +131,6 @@
                         작성하신 내용은 동아리 운영진에게 전달됩니다.
                     </p>
                     
-                    <!-- 
-                      !!! 중요 !!!
-                      "href" 안에 실제 Google Form 링크를 넣어주세요.
-                    -->
                     <a href="YOUR_GOOGLE_FORM_LINK_HERE" 
                        target="_blank" 
                        rel="noopener noreferrer"
@@ -145,18 +144,14 @@
                 </div>
             </div>
 
-        </section> <!-- /#form-section -->
+        </section> </main>
 
-    </main>
-
-    <!-- 푸터 -->
     <footer class="bg-gray-900 text-gray-400 text-center p-8 mt-16">
         <p>&copy; 2025 Mobile Robotics. All rights reserved.</p>
         <p class="text-sm mt-1">이 웹사이트는 홍보용으로 제작되었습니다.</p>
     </footer>
 
 
-    <!-- JavaScript (섹션 전환 로직) -->
     <script>
         // 현재 활성화된 섹션을 추적하는 변수
         let currentSection = 'home';
